@@ -1,38 +1,70 @@
 ---
-title: Hello World
+title: Linux命令操作
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+Linux使用者逐渐增多，对Linux熟练掌握成为必然，随后，那就必须学会它的操作命令。虽然可能会花费一些时间，不过从长远的角度来说，这的确是一件事半功倍的事情，它会让我们更了解Linux，更灵活地去使用Linux。
+Linux提供了很多命令，接下来简单介绍下Linux全面的操作命令，系统学习。
 
-## Quick Start
 
-### Create a new post
-
-``` bash
-$ hexo new "My New Post"
 ```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
+系统
+# uname -a               # 查看内核/操作系统/CPU信息
+# head -n 1 /etc/issue   # 查看操作系统版本
+# cat /proc/cpuinfo      # 查看CPU信息
+# hostname               # 查看计算机名
+# lspci -tv              # 列出所有PCI设备
+# lsusb -tv              # 列出所有USB设备
+# lsmod                  # 列出加载的内核模块
+# env                    # 查看环境变量
 ```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
 ```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
+资源
+# free -m                # 查看内存使用量和交换区使用量
+# df -h                  # 查看各分区使用情况
+# du -sh <目录名>        # 查看指定目录的大小
+# grep MemTotal /proc/meminfo   # 查看内存总量
+# grep MemFree /proc/meminfo    # 查看空闲内存量
+# uptime                 # 查看系统运行时间、用户数、负载
+# cat /proc/loadavg      # 查看系统负载
 ```
+```
+磁盘和分区
+# mount | column -t      # 查看挂接的分区状态
+# fdisk -l               # 查看所有分区
+# swapon -s              # 查看所有交换分区
+# hdparm -i /dev/hda     # 查看磁盘参数(仅适用于IDE设备)
+# dmesg | grep IDE       # 查看启动时IDE设备检测状况
+```
+```
+网络
+# ifconfig               # 查看所有网络接口的属性
+# iptables -L            # 查看防火墙设置
+# route -n               # 查看路由表
+# netstat -lntp          # 查看所有监听端口
+# netstat -antp          # 查看所有已经建立的连接
+# netstat -s             # 查看网络统计信息
+```
+```
+进程
+# ps -ef                 # 查看所有进程
+# top                    # 实时显示进程状态
 
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+# sudo fuser -k 8000/tcp	#关闭和端口8000相关的进程
+```
+```
+用户
+# w                      # 查看活动用户
+# id <用户名>            # 查看指定用户信息
+# last                   # 查看用户登录日志
+# cut -d: -f1 /etc/passwd   # 查看系统所有用户
+# cut -d: -f1 /etc/group    # 查看系统所有组
+# crontab -l             # 查看当前用户的计划任务
+```
+```
+服务
+# chkconfig --list       # 列出所有系统服务
+# chkconfig --list | grep on    # 列出所有启动的系统服务
+```
+```
+程序
+# rpm -qa                # 查看所有安装的软件包
+```
