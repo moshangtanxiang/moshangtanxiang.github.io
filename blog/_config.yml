@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: mofeng
 subtitle:
-description:
+description:  一程烟雨，然后，一段过往。
 keywords:
-author: John Doe
-language: zh-CN
+author: 陌上檀香
+language: zh-Hans
 timezone:
 
 # URL
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-yilia
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
