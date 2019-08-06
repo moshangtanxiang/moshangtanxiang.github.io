@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="vue钩子,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="一程烟雨，然后，一段过往。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="mofeng">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+<meta name="description" content="created()：在创建vue对象时，当html渲染之前就触发；但是注意，全局vue.js不强制刷新或者重启时只创建一次，也就是说，created()只会触发一次；created 这个钩子在实例被创建之后被调用。一般可以在created函数中调用ajax获取页面初始化所需的数据。示例： 1234567891011121314151617&amp;lt;template&amp;gt;(  )&amp;lt;div cl">
+<meta name="keywords" content="vue钩子">
+<meta property="og:type" content="article">
+<meta property="og:title" content="created()与mounted()">
+<meta property="og:url" content="http://yoursite.com/2019/08/05/created-与mounted-/index.html">
 <meta property="og:site_name" content="mofeng">
-<meta property="og:description" content="一程烟雨，然后，一段过往。">
+<meta property="og:description" content="created()：在创建vue对象时，当html渲染之前就触发；但是注意，全局vue.js不强制刷新或者重启时只创建一次，也就是说，created()只会触发一次；created 这个钩子在实例被创建之后被调用。一般可以在created函数中调用ajax获取页面初始化所需的数据。示例： 1234567891011121314151617&amp;lt;template&amp;gt;(  )&amp;lt;div cl">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-06T02:08:50.056Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mofeng">
-<meta name="twitter:description" content="一程烟雨，然后，一段过往。">
+<meta name="twitter:title" content="created()与mounted()">
+<meta name="twitter:description" content="created()：在创建vue对象时，当html渲染之前就触发；但是注意，全局vue.js不强制刷新或者重启时只创建一次，也就是说，created()只会触发一次；created 这个钩子在实例被创建之后被调用。一般可以在created函数中调用ajax获取页面初始化所需的数据。示例： 1234567891011121314151617&amp;lt;template&amp;gt;(  )&amp;lt;div cl">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2019/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/05/created-与mounted-/">
 
 
 
 
 
-  <title>归档 | mofeng</title>
+  <title>created()与mounted() | mofeng</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -269,142 +271,180 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/05/created-与mounted-/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陌上檀香">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mofeng">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">created()与mounted()</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-05T18:55:22+08:00">
+                2019-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 3 篇日志。 继续努力。
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/05/created-与mounted-/" itemprop="url">
-              
-                <span itemprop="name">created()与mounted()</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-05T18:55:22+08:00" content="2019-08-05">
-          08-05
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/31/css-vh/" itemprop="url">
-              
-                <span itemprop="name">css_vh</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-31T15:30:02+08:00" content="2019-07-31">
-          07-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <p>created()：在创建vue对象时，当html渲染之前就触发；但是注意，全局vue.js不强制刷新或者重启时只创建一次，也就是说，created()只会触发一次；created 这个钩子在实例被创建之后被调用。一般可以在created函数中调用ajax获取页面初始化所需的数据。<br>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">(  )&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">(  )(  )&lt;div id=&quot;name&quot;&gt;&#123;&#123; name &#125;&#125;&lt;/div&gt;</span><br><span class="line">(  )&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">(  )export default&#123;</span><br><span class="line">(  )(  )data()&#123;</span><br><span class="line">(  )(  )(  )return&#123;</span><br><span class="line">(  )(  )(  )(  )name: hello</span><br><span class="line">(  )(  )(  )&#125;</span><br><span class="line">(  )(  )&#125;,</span><br><span class="line">(  )(  )created: function()&#123;</span><br><span class="line">(  )(  )(  )console. log( document. getElementById(&quot;name&quot;).innerHTML);</span><br><span class="line">(  )(  )&#125;</span><br><span class="line">(  )&#125;</span><br><span class="line">&lt;script&gt;</span><br></pre></td></tr></table></figure>
 
-        
-        
+<p>出现如下报错：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">TypeError: Cannot read property &apos;innerHTML Of null&apos;</span><br><span class="line">at Vue Component created (parent, vue?cad: 17)</span><br><span class="line">at callHook (vue, esm. is2efeb: 2921)</span><br><span class="line">at VueComponent. Vue, init (yue, esm. is2efeb: 4630)</span><br><span class="line">at new Vue Component (yue, esm, is?feb: 4798)</span><br><span class="line">at createComponent InstanceForVnode (yue, esm. is2efeb: 4310)</span><br><span class="line">at init (yue, esm, is?feb: 4131)</span><br><span class="line">at createComponent (yue, esm, is?feb: 5608)</span><br><span class="line">at createElm (yue, esm.is2efeb: 5555)</span><br><span class="line">at createChildren (vue esm is2efeb 5682)</span><br></pre></td></tr></table></figure>
 
-        
+<p>挂载阶段还没开始，也就是说，模板还没有被渲染成html；也就是这时候通过id什么的去查找页面元素是找不到的</p>
+<p>mounted()：mounted钩子函数一般是用来向后端发起请求拿到数据以后做一些业务处理，该钩子函数是在挂载完成以后也就是模板渲染完成以后才会被调用（vue的生命周期中一个实例的mounted只会运行一次）<br>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">(  )&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">(  )(  )&lt;div id=&quot;name&quot;&gt;&#123;&#123; name &#125;&#125;&lt;/div&gt;</span><br><span class="line">(  )&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">(  )export default&#123;</span><br><span class="line">(  )(  )data()&#123;</span><br><span class="line">(  )(  )(  )return&#123;</span><br><span class="line">(  )(  )(  )(  )name: hello</span><br><span class="line">(  )(  )(  )&#125;</span><br><span class="line">(  )(  )&#125;,</span><br><span class="line">(  )(  )mounted: function()&#123;</span><br><span class="line">(  )(  )(  )console. log( document. getElementById(&quot;name&quot;).innerHTML);</span><br><span class="line">(  )(  )&#125;</span><br><span class="line">(  )&#125;</span><br><span class="line">&lt;script&gt;</span><br></pre></td></tr></table></figure>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/26/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Linux命令操作</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-26T18:30:22+08:00" content="2019-07-26">
-          07-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p>结果是：hello<br>取到了值，这说明这时候vue模板已经渲染完毕。因此，Dom操作一般是在mounted钩子函数中进行的</p>
+<p>通常created使用的次数多，而mounted通常是在一些插件的使用或者组件的使用中进行操作，比如插件chart.js的使用: var ctx = document.getElementById(ID);通常会有这一步，而如果你写入组件中，你会发现在created中无法对chart进行一些初始化配置，一定要等这个html渲染完后才可以进行，那么mounted就是不二之选。<br>methods:{}中的方法都需要主动去触发，比如点击click之类的<br>而created(){}、mounted(){}、里面的代码都是自动去执行的，即vue生命周期到了哪一步就直接去执行对应钩子函数里面的代码了，无需手动去执行<br>created中主要放初始化获取数据之类，mounted()中挂载到具体的DOM节点</p>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue钩子/" rel="tag"># vue钩子</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/31/css-vh/" rel="next" title="css_vh">
+                <i class="fa fa-chevron-left"></i> css_vh
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -412,6 +452,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -653,6 +697,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
