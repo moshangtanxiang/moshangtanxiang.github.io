@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[echarts点击切换路由]]></title>
+    <url>%2F2019%2F08%2F12%2Fecharts%E7%82%B9%E5%87%BB%E5%88%87%E6%8D%A2%E8%B7%AF%E7%94%B1%2F</url>
+    <content type="text"><![CDATA[&ensp;&ensp;&ensp;&ensp;vue中使用echarts，然后点击echars图表进行切换路由（以funnel为例）： &ensp;&ensp;&ensp;&ensp;跳转界面因所需对dom节点操作，所以使用了mounted；&ensp;&ensp;&ensp;&ensp;为过滤器赋值（路由跳转传入），如果直接在方法中赋值会比较死板，过滤器一直绑定传入数据： &ensp;&ensp;&ensp;&ensp;使用activated（进入当前存在activated()函数的页面时，一进入页面就触发）： &ensp;&ensp;&ensp;&ensp;但是重新刷新此页面时会发现，mounted和catived都会执行；因此，加上判断即可。]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>echarts</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[computed() VS methods()]]></title>
     <url>%2F2019%2F08%2F06%2Fcomputed-VSmethods-%2F</url>
     <content type="text"><![CDATA[&ensp;&ensp;&ensp;&ensp;可以使用 methods 来替代 computed(计算机属性)，效果上两个都是一样的，但是 computed 是基于它的依赖缓存，只有相关依赖发生改变时才会重新取值。而使用 methods ，在重新渲染的时候，函数总会重新调用执行。 Date.now() 不是响应式依赖，这样的computed不会再次更新： 12345computed: &#123; now: function () &#123; return Date.now() &#125;&#125; 响应式依赖： 123456computed: &#123; reversedMessage: function () &#123; return this.message.split(&apos;&apos;).reverse().join(&apos;&apos;) //这里的message是同一个组件里面的data()里边定义好了的一个变量 &#125;&#125; message每次变动的时候，都会执行一次computed，把它刚获得的新值再“倒置”。相比而言，只要发生重新渲染，method 调用总会执行该函数。 没有使用到计算属性的依赖缓存的时候，可以使用定义方法来代替计算属性，在 methods 里定义一个方法可以实现相同的效果，甚至该方法还可以接受参数，使用起来更灵活。 computed必须返回一个值页面绑定的才能取得值，而methods中可以只执行逻辑代码，返回值可有可无。]]></content>
