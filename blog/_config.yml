@@ -80,3 +80,4 @@ theme: next
 deploy:
   type: git
   repo: https://github.com/moshangtanxiang/moshangtanxiang.github.io
+  branch: gh-pages
