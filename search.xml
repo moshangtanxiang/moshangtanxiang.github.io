@@ -2,14 +2,6 @@
 <search>
   <entry>
     <title><![CDATA[页面缓存]]></title>
-    <url>%2F2019%2F11%2F15%2F%E7%BC%93%E5%AD%98%E8%AE%BE%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[前端页面常用缓存，具体设置哪种根据项目需求而定 cookie缓存：cookie设置12345setCookie(name,value)&#123; var exp = new Date(); exp.setTime(exp.getTime() + 2*30*24*60*60*1000); document.cookie = name + &quot;=&quot;+ escape (value) + &quot;;expires=&quot; + exp.toGMTString();&#125;, cookie获取1234567getCookie(name)&#123; var arr,reg=new RegExp(&quot;(^| )&quot;+name+&quot;=([^;]*)(;|$)&quot;); if(arr=document.cookie.match(reg)) return unescape(arr[2]); else return null;&#125;, localstorage缓存:// 缓存数据字典 api.dictionary_get({type:’Gender’}).then(res=&gt;{ localStorage.setItem(“Gender”, JSON.stringify(res.data)); })// 单一死数据 localStorage.setItem(“Gender”, “data”); localStorage.getItem(&quot;Gender&quot;);]]></content>
-      <tags>
-        <tag>cookie</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[页面缓存]]></title>
     <url>%2F2019%2F11%2F15%2Fset_cookie%2F</url>
     <content type="text"><![CDATA[前端页面常用缓存，具体设置哪种根据项目需求而定 cookie缓存：cookie设置12345setCookie(name,value)&#123; var exp = new Date(); exp.setTime(exp.getTime() + 2*30*24*60*60*1000); document.cookie = name + &quot;=&quot;+ escape (value) + &quot;;expires=&quot; + exp.toGMTString();&#125;, cookie获取1234567getCookie(name)&#123; var arr,reg=new RegExp(&quot;(^| )&quot;+name+&quot;=([^;]*)(;|$)&quot;); if(arr=document.cookie.match(reg)) return unescape(arr[2]); else return null;&#125;, localstorage缓存:// 缓存数据字典 api.dictionary_get({type:’Gender’}).then(res=&gt;{ localStorage.setItem(“Gender”, JSON.stringify(res.data)); })// 单一死数据 localStorage.setItem(“Gender”, “data”); localStorage.getItem(&quot;Gender&quot;);]]></content>
       <tags>
