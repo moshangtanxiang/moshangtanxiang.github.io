@@ -19,8 +19,8 @@ categories:
 	  </div>
 ```
 
-html部分由上，columns的title代表表头，key绑定接受后台传入字段名，数据部分绑定list，自动循环。
-操作按钮需要手写，如其他字段一样；如数据无误，打印params会有相关行内数据，获取相关数据进行操作。
+&ensp;&ensp;&ensp;&ensp;html部分由上，columns的title代表表头，key绑定接受后台传入字段名，数据部分绑定list，自动循环。
+&ensp;&ensp;&ensp;&ensp;操作按钮需要手写，如其他字段一样；如数据无误，打印params会有相关行内数据，获取相关数据进行操作。
 
 ```
 		data() {
@@ -100,6 +100,7 @@ html部分由上，columns的title代表表头，key绑定接受后台传入字�
             }
         }
 ```
+&ensp;&ensp;&ensp;&ensp;如需进行表格相关操作，如上 rander函数内进行。
 
 以下翻页，其他data、接口等方面同vue类似。
 ```
@@ -114,23 +115,5 @@ html部分由上，columns的title代表表头，key绑定接受后台传入字�
         })
     },
     ```
-## 数据导出
-接下来是一种导出的写法，隐藏表单提交导出所需文件：
-```
- 		<form  action="接口地址" target="_blank" id="formdata" method ="post"  style="display: none;">
-          <input type="hidden" name="模糊查询字段名" :value="字段值" />
-        </form>
-
-
-      	<Button style="color:#0066ff" @click="reportEmploryExport()">
-	        <Icon custom="i-icon iconevent_up" size="14"/>
-	        导出
-	    </Button>
-
-
-    reportEmploryExport() {
-        $('#formdata').submit();
-    },
-            ```
 
 
