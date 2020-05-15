@@ -38,6 +38,8 @@ tags: cookie
 ```
 &ensp;&ensp;&ensp;&ensp;cookie：不设置存活时间 是**保存在浏览器内存中**，关闭浏览器则内存消失；如果设置保存时间，将保存在浏览器硬盘中，如果不超时就一直存在，超时则消失。
 ### （会话流程）
+
+![funnel](/img/session.png)
 &ensp;&ensp;&ensp;&ensp;服务器创建session、cookie，服务器保存session信息，但有一个唯一标识符sessionid保存在cookie中发送给浏览器，再访问时根据sessionid找session信息。
 * session销毁方式：
     + session默认存活时间只有三十分钟，超时即销毁；
