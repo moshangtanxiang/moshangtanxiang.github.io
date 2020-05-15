@@ -108,12 +108,13 @@
 <meta property="og:site_name" content="mofeng">
 <meta property="og:description" content="localstorage缓存:1234567  // 缓存数据字典    api.dictionary_get(&amp;#123;type:&amp;apos;Gender&amp;apos;&amp;#125;).then(res=&amp;gt;&amp;#123;        localStorage.setItem(&amp;quot;Gender&amp;quot;, JSON.stringify(res.data));    &amp;#125;)lo">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/img/session.png">
 <meta property="og:image" content="http://yoursite.com/img/storage.png">
-<meta property="og:updated_time" content="2020-05-15T03:51:16.111Z">
+<meta property="og:updated_time" content="2020-05-15T07:21:17.894Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="页面缓存">
 <meta name="twitter:description" content="localstorage缓存:1234567  // 缓存数据字典    api.dictionary_get(&amp;#123;type:&amp;apos;Gender&amp;apos;&amp;#125;).then(res=&amp;gt;&amp;#123;        localStorage.setItem(&amp;quot;Gender&amp;quot;, JSON.stringify(res.data));    &amp;#125;)lo">
-<meta name="twitter:image" content="http://yoursite.com/img/storage.png">
+<meta name="twitter:image" content="http://yoursite.com/img/session.png">
 
 
 
@@ -389,7 +390,7 @@
 <h3 id="cookie获取"><a href="#cookie获取" class="headerlink" title="cookie获取"></a>cookie获取</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">getCookie(name)&#123;</span><br><span class="line">    var arr,reg=new RegExp(&quot;(^| )&quot;+name+&quot;=([^;]*)(;|$)&quot;);</span><br><span class="line">    if(arr=document.cookie.match(reg))</span><br><span class="line">        return unescape(arr[2]);</span><br><span class="line">    else</span><br><span class="line">        return null;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 
 <p>&ensp;&ensp;&ensp;&ensp;cookie：不设置存活时间 是<strong>保存在浏览器内存中</strong>，关闭浏览器则内存消失；如果设置保存时间，将保存在浏览器硬盘中，如果不超时就一直存在，超时则消失。</p>
-<h3 id="（会话流程）"><a href="#（会话流程）" class="headerlink" title="（会话流程）"></a>（会话流程）</h3><p>&ensp;&ensp;&ensp;&ensp;服务器创建session、cookie，服务器保存session信息，但有一个唯一标识符sessionid保存在cookie中发送给浏览器，再访问时根据sessionid找session信息。</p>
+<h3 id="（会话流程）"><a href="#（会话流程）" class="headerlink" title="（会话流程）"></a>（会话流程）</h3><p><img src="/img/session.png" alt="funnel"><br>&ensp;&ensp;&ensp;&ensp;服务器创建session、cookie，服务器保存session信息，但有一个唯一标识符sessionid保存在cookie中发送给浏览器，再访问时根据sessionid找session信息。</p>
 <ul>
 <li>session销毁方式：<ul>
 <li>session默认存活时间只有三十分钟，超时即销毁；</li>
