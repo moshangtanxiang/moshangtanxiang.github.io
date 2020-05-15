@@ -89,7 +89,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="vue-router," />
 
 
 
@@ -100,17 +100,18 @@
 
 
 
-<meta name="description" content="vue-router实现原理：vue-router实现单页面跳转，提供了三种方式：hash模式、history模式、abstract模式，根据mode参数决定采用哪种 路由模式： vue-router 提供了三种运行模式： hash: 使用 URL hash 值来作路由。默认模式。 history: 依赖 HTML5 History API 和服务器配置。 abstract: 支持所有 JavaS">
+<meta name="description" content="vue-router实现原理：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;vue-router实现单页面跳转，提供了三种方式：hash模式、history模式、abstract模式，根据mode参数决定采用哪种 路由模式：vue-router 提供了三种运行模式：  hash: 使用 URL hash 值来作路由。默认模式。 history: 依赖 HTML5 History API 和服务器">
+<meta name="keywords" content="vue-router">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue-router">
 <meta property="og:url" content="http://yoursite.com/2020/05/15/vue-router/index.html">
 <meta property="og:site_name" content="mofeng">
-<meta property="og:description" content="vue-router实现原理：vue-router实现单页面跳转，提供了三种方式：hash模式、history模式、abstract模式，根据mode参数决定采用哪种 路由模式： vue-router 提供了三种运行模式： hash: 使用 URL hash 值来作路由。默认模式。 history: 依赖 HTML5 History API 和服务器配置。 abstract: 支持所有 JavaS">
+<meta property="og:description" content="vue-router实现原理：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;vue-router实现单页面跳转，提供了三种方式：hash模式、history模式、abstract模式，根据mode参数决定采用哪种 路由模式：vue-router 提供了三种运行模式：  hash: 使用 URL hash 值来作路由。默认模式。 history: 依赖 HTML5 History API 和服务器">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-15T08:00:54.791Z">
+<meta property="og:updated_time" content="2020-05-15T08:18:31.630Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-router">
-<meta name="twitter:description" content="vue-router实现原理：vue-router实现单页面跳转，提供了三种方式：hash模式、history模式、abstract模式，根据mode参数决定采用哪种 路由模式： vue-router 提供了三种运行模式： hash: 使用 URL hash 值来作路由。默认模式。 history: 依赖 HTML5 History API 和服务器配置。 abstract: 支持所有 JavaS">
+<meta name="twitter:description" content="vue-router实现原理：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;vue-router实现单页面跳转，提供了三种方式：hash模式、history模式、abstract模式，根据mode参数决定采用哪种 路由模式：vue-router 提供了三种运行模式：  hash: 使用 URL hash 值来作路由。默认模式。 history: 依赖 HTML5 History API 和服务器">
 
 
 
@@ -352,6 +353,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -379,23 +402,19 @@
       
 
       
-        <h2 id="vue-router实现原理："><a href="#vue-router实现原理：" class="headerlink" title="vue-router实现原理："></a>vue-router实现原理：</h2><p>vue-router实现单页面跳转，提供了三种方式：hash模式、history模式、abstract模式，根据mode参数决定采用哪种</p>
-<h3 id="路由模式："><a href="#路由模式：" class="headerlink" title="路由模式："></a>路由模式：</h3><ul>
-<li>vue-router 提供了三种运行模式：<ul>
+        <h3 id="vue-router实现原理："><a href="#vue-router实现原理：" class="headerlink" title="vue-router实现原理："></a>vue-router实现原理：</h3><p>&ensp;&ensp;&ensp;&ensp;vue-router实现单页面跳转，提供了三种方式：hash模式、history模式、abstract模式，根据mode参数决定采用哪种</p>
+<h3 id="路由模式："><a href="#路由模式：" class="headerlink" title="路由模式："></a>路由模式：</h3><p>vue-router 提供了三种运行模式：</p>
+<ul>
 <li>hash: 使用 URL hash 值来作路由。默认模式。</li>
 <li>history: 依赖 HTML5 History API 和服务器配置。</li>
 <li>abstract: 支持所有 JavaScript 运行环境，如 Node.js 服务器端</li>
 </ul>
-</li>
-</ul>
-<ul>
-<li><p>Hash模式<br>hash即浏览器url中#后面的内容，包含#。hash是URL中的锚点，代表的是网页中的一个位置，单单改变#后的部分，浏览器只会加载相应位置的内容，不会重新加载页面。<br>也就是说<br>即#是用来指导浏览器动作的，对服务器端完全无用，HTTP请求中，不包含#。<br>每一次改变#后的部分，都会在浏览器的访问历史中增加一个记录，使用”后退”按钮，就可以回到上一个位置。<br>所以说Hash模式通过锚点值的改变，根据不同的值，渲染指定DOM位置的不同数据。</p>
-</li>
-<li><p>History模式<br>HTML5 History API提供了一种功能，能让开发人员在不刷新整个页面的情况下修改站点的URL，就是利用 history.pushState API 来完成 URL 跳转而无须重新加载页面；<br>由于hash模式会在url中自带#，如果不想要很丑的 hash，我们可以用路由的 history 模式，只需要在配置路由规则时，加入”mode: ‘history’”,这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。<br>有时，history模式下也会出问题：<br>eg:<br>hash模式下：xxx.com/#/id=5 请求地址为 xxx.com,没有问题。<br>history模式下：xxx.com/id=5 请求地址为 xxx.com/id=5，如果后端没有对应的路由处理，就会返回404错误；<br>为了应对这种情况，需要后台配置支持：<br>在服务端增加一个覆盖所有情况的候选资源：如果 URL 匹配不到任何静态资源，则应该返回同一个 index.html 页面，这个页面就是你 app 依赖的页面。</p>
-</li>
-<li><p>abstract模式<br>abstract模式是使用一个不依赖于浏览器的浏览历史虚拟管理后端。<br>根据平台差异可以看出，在 Weex 环境中只支持使用 abstract 模式。 不过，vue-router 自身会对环境做校验，如果发现没有浏览器的 API，vue-router 会自动强制进入 abstract 模式，所以 在使用 vue-router 时只要不写 mode 配置即可，默认会在浏览器环境中使用 hash 模式，在移动端原生环境中使用 abstract 模式。 （当然，你也可以明确指定在所有情况下都使用 abstract 模式）。</p>
-</li>
-</ul>
+<h4 id="1-Hash模式"><a href="#1-Hash模式" class="headerlink" title="1. Hash模式"></a>1. Hash模式</h4><p>&ensp;&ensp;&ensp;&ensp;hash即浏览器url中#后面的内容，包含#。hash是URL中的锚点，代表的是网页中的一个位置，单单改变#后的部分，浏览器只会加载相应位置的内容，不会重新加载页面。<br>&ensp;&ensp;&ensp;&ensp;也就是说即#是用来指导浏览器动作的，对服务器端完全无用，HTTP请求中，不包含#。每一次改变#后的部分，都会在浏览器的访问历史中增加一个记录，使用”后退”按钮，就可以回到上一个位置。所以说Hash模式通过锚点值的改变，根据不同的值，渲染指定DOM位置的不同数据。</p>
+<h4 id="2-History模式"><a href="#2-History模式" class="headerlink" title="2. History模式"></a>2. History模式</h4><p>&ensp;&ensp;&ensp;&ensp;HTML5 History API提供了一种功能，能让开发人员在不刷新整个页面的情况下修改站点的URL，就是利用 history.pushState API 来完成 URL 跳转而无须重新加载页面；由于hash模式会在url中自带#，如果不想要很丑的 hash，我们可以用路由的 history 模式，只需要在配置路由规则时，加入”mode: ‘history’”,这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。<br>有时，history模式下也会出问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line">hash模式下：xxx.com/#/id=5 请求地址为 xxx.com,没有问题。</span><br><span class="line">history模式下：xxx.com/id=5 请求地址为 xxx.com/id=5，如果后端没有对应的路由处理，就会返回404错误；</span><br></pre></td></tr></table></figure>
+
+<p>为了应对这种情况，需要后台配置支持：<br>在服务端增加一个覆盖所有情况的候选资源：如果 URL 匹配不到任何静态资源，则应该返回同一个 index.html 页面，这个页面就是你 app 依赖的页面。</p>
+<h4 id="3-abstract模式"><a href="#3-abstract模式" class="headerlink" title="3. abstract模式"></a>3. abstract模式</h4><p>&ensp;&ensp;&ensp;&ensp;abstract模式是使用一个不依赖于浏览器的浏览历史虚拟管理后端。<br>&ensp;&ensp;&ensp;&ensp;根据平台差异可以看出，在 Weex 环境中只支持使用 abstract 模式。 不过，vue-router 自身会对环境做校验，如果发现没有浏览器的 API，vue-router 会自动强制进入 abstract 模式，所以 在使用 vue-router 时只要不写 mode 配置即可，默认会在浏览器环境中使用 hash 模式，在移动端原生环境中使用 abstract 模式。 （当然，你也可以明确指定在所有情况下都使用 abstract 模式）。</p>
 
       
     </div>
@@ -420,6 +439,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue-router/" rel="tag"># vue-router</a>
+          
+        </div>
       
 
       
@@ -541,7 +566,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -596,7 +621,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-router实现原理："><span class="nav-number">1.</span> <span class="nav-text">vue-router实现原理：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#路由模式："><span class="nav-number">1.1.</span> <span class="nav-text">路由模式：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-router实现原理："><span class="nav-number">1.</span> <span class="nav-text">vue-router实现原理：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由模式："><span class="nav-number">2.</span> <span class="nav-text">路由模式：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Hash模式"><span class="nav-number">2.1.</span> <span class="nav-text">1. Hash模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-History模式"><span class="nav-number">2.2.</span> <span class="nav-text">2. History模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-abstract模式"><span class="nav-number">2.3.</span> <span class="nav-text">3. abstract模式</span></a></li></ol></li></ol></div>
             
 
           </div>
